@@ -3,7 +3,7 @@
 An interactive, multi-frame viewer for exhibits which supports touch events and panel sliders to be able to expand into full view of each video.
 
 ### Demo
-[View an interactive demo](https://brass-mulberry-mink.glitch.me/
+[View an interactive demo](https://brass-mulberry-mink.glitch.me/)
 
 ### Configuration
 
