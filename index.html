@@ -3,27 +3,27 @@
 <head>
   <meta charset="UTF-8">
   <title>Multi-Video Viewer with Subtitles</title>
-  <!-- Title Mass Graves as Markers of the Contemporary Human Condition: A Visual Introduction -->
-  <!-- Last Slide: Concept and footage: Ewa Domańska -->
-  <!-- Technical production: Michał Krupa - Stanford, CA 2024 -->
+<!--
+  4. Dźwięk: czy można tak zrobić, by przez cały czas video był dźwięk metalowych kręgów (muzeum)?
+  6. Jeżeli to możliwe, dodaj jeszcze jeden footage ze Srebrenicy (w załączeniu – cały). Napis: Exhumation of remains from mass grave in Srebrenica, 2006 -->
   <link rel="stylesheet" href="./style.css" />
 </head>
 <body>
   <div id="videoWrapper">
     <div class="video-layer" id="video3">
-      <video muted autoplay loop playsinline preload="auto"></video>
+      <video muted autoplay playsinline preload="auto"></video>
     </div>
     <div class="video-layer" id="video2" style="clip-path: inset(0 33.33% 0 0); z-index: 10;">
-      <video muted autoplay loop playsinline preload="auto"></video>
+      <video muted autoplay playsinline preload="auto"></video>
     </div>
     <div class="video-layer" id="video1" style="clip-path: inset(0 66.66% 0 0); z-index: 20;">
-      <video muted autoplay loop playsinline preload="auto"></video>
+      <video muted autoplay playsinline preload="auto"></video>
     </div>
 
     <!-- Subtitles -->
-    <div class="subtitle" id="subtitle1"></div>
-    <div class="subtitle" id="subtitle2"></div>
-    <div class="subtitle" id="subtitle3"></div>
+    <div class="subtitle scroll" id="subtitle1"></div>
+    <div class="subtitle scroll" id="subtitle2"></div>
+    <div class="subtitle scroll" id="subtitle3"></div>
 
     <!-- Sliders -->
     <div class="slider" id="slider1" style="left: 33.33%;"></div>
@@ -33,7 +33,7 @@
   <!-- Title overlay -->
   <div id="titleOverlay">
     <div class="title-content">
-      Mass Graves and Exhumations as Markers of the Contemporary Human Condition: A Visual Introduction
+      <h1>Mass Graves and Exhumations as Markers of the Contemporary Human Condition: A Visual Introduction</h1>
     </div>
   </div>
 
@@ -53,7 +53,9 @@
       Stanford University 2025
     </div>
   </div>
+  
+  <audio id="backgroundAudio" src="2.mp4" preload="auto" loop></audio>
 
-  <script src="./script.js" />
+  <script src="./script.js"></script>
 </body>
 </html>

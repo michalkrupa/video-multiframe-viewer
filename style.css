@@ -66,6 +66,19 @@
     transition: opacity 0.5s ease;
   }
 
+  .subtitle span.scrolling {
+    animation: scroll-left 30s linear;
+  }
+  
+  @keyframes scroll-left {
+    0% {
+      transform: translateX(100%);
+    }
+    100% {
+      transform: translateX(-100%);
+    }
+}
+
   /* ---------- TITLE SCREEN ---------- */
   #titleOverlay {
     position: fixed;
