@@ -1,48 +1,48 @@
 /******************** DATA ********************/
 const videoSets = [
     {
-        sources: ["videos/3.mp4", "videos/2.mp4", "videos/1.mp4"],
-        startTimes: [190, 13, 0],
-        endTimes: [null, 70, null],
+        sources: ["videos/1.mp4", "videos/2.mp4", "videos/3.mp4"],
+        startTimes: [0, 0, 0],
+        endTimes: [null, null, null],
         subtitles: [
-            "Im Wald von Katyn (1943)",
-            "Menashe Kadishman, “Shalekhet” (Fallen Leaves), Jewish Museum, Berlin, Germany (2014)",
-            "Exhumations in “Death Valley”, Poland (2024)"
+            "Subtitle 1",
+            "Subtitle 2",
+            "Subtitle 3"
         ],
-        scale: [1.3, 1, 1.5]
+        scale: [1, 1, 1]
     },
     {
-        sources: ["videos/6.mp4", "videos/5.webm", "videos/4.mp4"],
-        startTimes: [0, 20, 0],
-        endTimes: [null, 106, null],
+        sources: ["videos/4.mp4", "videos/5.mp4", "videos/6.mp4"],
+        startTimes: [0, 0, 0],
+        endTimes: [null, null, null],
         subtitles: [
-            "Soltau Woods Mass Grave, Germany (1945)",
-            "Bucha Atrocities, Ukraine (2022)",
-            "A new mass grave from the 1994 Tutsi genocide was discovered in southern Rwanda (2023)"
+            "Subtitle 4",
+            "Subtitle 5",
+            "Subtitle 6"
         ],
         scale: [1, 2, 1]
     },
     {
-        sources: ["videos/9.mp4", "videos/8.mp4", "videos/7.mp4"],
-        startTimes: [6, 262, 0],
+        sources: ["videos/7.mp4", "videos/8.mp4", "videos/9.mp4"],
+        startTimes: [0, 0, 0],
         endTimes: [null, null, null],
         subtitles: [
-            "Zimbabwean families seek proper burials for victims of 1980s violence (2024)",
-            "The Forensic Anthropology Foundation of Guatemala/FAFG (2014)",
-            "Kampuchea: Further mass graves from Pol Pot regime discovered near Phnom Penh (1980)"
+            "Subtitle 7",
+            "Subtitle 8",
+            "Subtitle 9"
         ],
-        scale: [1.5, 1, 1]
+        scale: [1, 1, 1]
     },
     {
         sources: ["videos/10.mp4", null, null],
-        startTimes: [10, null, null],
-        endTimes: [80, null, null],
+        startTimes: [0, null, null],
+        endTimes: [null, null, null],
         subtitles: [
-            "Exhumation of remains from mass grave in Srebrenica, 2006",
+            "Subtitle 10",
             null,
             null
         ],
-        scale: [1.2, 1, 1]
+        scale: [1, 1, 1]
     }
 ];
 
