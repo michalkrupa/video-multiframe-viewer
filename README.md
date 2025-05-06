@@ -1,3 +1,7 @@
+### Overview
+
+An interactive, multi-frame viewer which supports touch events and panel sliders to be able to expand into full view of each video.
+
 ### Configuration
 
 Edit the contents of the configuration is in index.html (open with Notepad)
