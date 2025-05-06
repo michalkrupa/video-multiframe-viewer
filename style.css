@@ -1,0 +1,145 @@
+* {
+    font-family: Arial, Helvetica, sans-serif;
+  }
+
+  html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    background: black;
+    overflow: hidden;
+  }
+
+  #videoWrapper {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    opacity: 0;
+  }
+
+  .video-layer {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    pointer-events: none;
+    opacity: 0;            /* hidden until intro finishes */
+    overflow: hidden;      /* contain scaling */
+    transition: opacity 3s ease;
+  }
+
+  video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.4s ease;
+  }
+
+  .slider {
+    position: absolute;
+    top: 0;
+    width: 5px;
+    height: 100%;
+    background: #000;
+    z-index: 200;
+    cursor: ew-resize;
+  }
+
+  .slider:hover {
+    background: rgba(0,0,0,0.5);
+  }
+
+  .subtitle {
+    position: absolute;
+    bottom: 0;
+    z-index: 150;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    padding: 10px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    pointer-events: none;
+    user-select: none;
+    opacity: 1;
+    transition: opacity 0.5s ease;
+  }
+
+  /* ---------- TITLE SCREEN ---------- */
+  #titleOverlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: black;
+    z-index: 1100; /* above content‑warning */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 1;             /* starts visible */
+    transition: opacity 2s ease;
+    pointer-events: none;
+  }
+
+  .title-content {
+    color: white;
+    text-align: center;
+    font-size: 2em;
+    max-width: 90%;
+    line-height: 1.4;
+    pointer-events: none;
+  }
+
+  /* ---------- CONTENT‑WARNING SCREEN ---------- */
+  #introOverlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: black;
+    z-index: 900;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;             /* will fade in AFTER title */
+    transition: opacity 2s ease;
+    pointer-events: none;
+  }
+
+  .intro-content {
+    color: white;
+    text-align: center;
+    font-size: 1.8em;
+    max-width: 80%;
+    line-height: 1.6;
+    pointer-events: none;
+  }
+
+  /* ---------- CREDITS SCREEN ---------- */
+  #creditOverlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: black;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;             /* only shown after first full loop */
+    transition: opacity 2s ease;
+    pointer-events: none;
+  }
+
+  .credit-content {
+    color: white;
+    text-align: center;
+    font-size: 1.8em;
+    max-width: 90%;
+    line-height: 1.6;
+    pointer-events: none;
+  }
