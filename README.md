@@ -8,6 +8,7 @@ Edit the contents of the configuration is in index.html (open with Notepad)
 
 * To set the start times of each video, edit the `startTimes` array - each value is mapped to the video in the `sources` (i.e., video 1 mapped to subtitle 1, etc.)
 
+* To set the end times of each video (optional), edit the `endTimes` array - each value is mapped to the video in the `sources` (i.e., video 1 mapped to subtitle 1, etc.)
 
 ``` javascript
 
