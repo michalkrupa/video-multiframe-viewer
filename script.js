@@ -76,21 +76,9 @@ function setupBlindSlider(slider, targetId, isSecond = false) {
     const target = document.getElementById(targetId);
     let dragging = false;
 
-    slider.addEventListener("mousedown", () => {
-        dragging = true;
-        document.body.style.cursor = "ew-resize";
-    });
-
-    window.addEventListener("mouseup", () => {
-        dragging = false;
-        document.body.style.cursor = "";
-    });
-
-    window.addEventListener("mousemove", e => {
-        if (!dragging) return;
-
+    function updateSliderPosition(clientX) {
         const rect = document.getElementById("videoWrapper").getBoundingClientRect();
-        let offsetX = e.clientX - rect.left;
+        let offsetX = clientX - rect.left;
         offsetX = Math.max(0, Math.min(offsetX, rect.width));
         const pct = (offsetX / rect.width) * 100;
 
@@ -105,8 +93,39 @@ function setupBlindSlider(slider, targetId, isSecond = false) {
         }
 
         updateSubtitlesFrame();
+    }
+
+    // Mouse support
+    slider.addEventListener("mousedown", () => {
+        dragging = true;
+        document.body.style.cursor = "ew-resize";
+    });
+
+    window.addEventListener("mouseup", () => {
+        dragging = false;
+        document.body.style.cursor = "";
+    });
+
+    window.addEventListener("mousemove", e => {
+        if (!dragging) return;
+        updateSliderPosition(e.clientX);
+    });
+
+    // Touch support
+    slider.addEventListener("touchstart", (e) => {
+        dragging = true;
+    });
+
+    window.addEventListener("touchend", () => {
+        dragging = false;
+    });
+
+    window.addEventListener("touchmove", e => {
+        if (!dragging || e.touches.length === 0) return;
+        updateSliderPosition(e.touches[0].clientX);
     });
 }
+
 
 setupBlindSlider(document.getElementById("slider1"), "video1");
 setupBlindSlider(document.getElementById("slider2"), "video2", true);
