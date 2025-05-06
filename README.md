@@ -1,6 +1,6 @@
 ### Overview
 
-An interactive, multi-frame viewer which supports touch events and panel sliders to be able to expand into full view of each video.
+An interactive, multi-frame viewer for exhibits which supports touch events and panel sliders to be able to expand into full view of each video.
 
 ### Configuration
 
