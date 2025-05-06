@@ -4,7 +4,7 @@ An interactive, multi-frame viewer for exhibits which supports touch events and 
 
 ### Configuration
 
-Edit the contents of the configuration is in index.html (open with Notepad)
+Edit the contents of the configuration in assets/script.js (open with Notepad)
 
 * The `sources` of each video set can be used to select the videos you want to display. Make sure they are in the same folder as the viewer code
 
